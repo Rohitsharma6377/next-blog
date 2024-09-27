@@ -1,5 +1,5 @@
 import React from 'react'
-import cat from '../category/cat.module.css'
+import cat from './cat.module.css'
 const Category = () => {
   return (
     <div>Category</div>

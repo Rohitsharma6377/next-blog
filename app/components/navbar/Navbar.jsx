@@ -1,5 +1,5 @@
 import React from 'react'
-import nav from '../navbar/nav.module.css'
+import nav from './nav.module.css'
 import Link from 'next/link';
 import Themetoggal from '../themetoggal/Themetoggal';
 import Authlink from '../authlinks/Authlink';

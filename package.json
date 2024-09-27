@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "push": "git add . && git commit -m 'commit' && git push"
   },
   "dependencies": {
     "eslint": "8.48.0",

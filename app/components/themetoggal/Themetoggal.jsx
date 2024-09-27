@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import theme from '../themetoggal/theme.module.css'
+import theme from './theme.module.css'
 import { ThemeContext } from '../context/ThemeContext'
 const Themetoggal = () => {
 

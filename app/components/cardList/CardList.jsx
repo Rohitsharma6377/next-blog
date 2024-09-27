@@ -1,5 +1,5 @@
 import React from 'react'
-import card from '../cardList/card.module.css'
+import card from './card.module.css'
 import Pagination from '../pagination/Pagination';
 const CardList = () => {
   return (
