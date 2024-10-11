@@ -2,19 +2,17 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import query from "@/lib/db";
 
-const generateToken = async (userId, userDetails, role) => {
+// Generate JWT without storing in DB
+const generateToken = (userId, userDetails, role) => {
   const token = jwt.sign(
     { id: userId, email: userDetails.email, role: role },
     process.env.JWT_SECRET_KEY,
-    { expiresIn: "30d" },
-  );
-  await query(
-    "UPDATE users SET email=?, password=?, role=?, jwt_token=? WHERE id=?",
-    [userDetails.email, userDetails.userPassword, role, token, userId],
+    { expiresIn: "30d" }
   );
   return token;
 };
 
+// Login API
 const loginUser = async (req, res) => {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
@@ -24,34 +22,25 @@ const loginUser = async (req, res) => {
   try {
     const users = await query(
       "SELECT id, password, role FROM users WHERE email = ?",
-      [email],
+      [email]
     );
     if (users.length === 0) {
       return res.status(404).json({ message: "Invalid email" });
     }
 
-    // console.log(req.body);
-    // console.log(users);
-
     const userId = users[0].id;
     const userPassword = users[0].password;
     const userRole = users[0].role;
 
-    // console.log({userId, userPassword});
+    // Compare passwords
     const isMatch = await bcrypt.compare(password, userPassword);
 
-    // console.log(isMatch);
-
     if (!isMatch) {
-      // console.log('isMatch', isMatch);
-      return res.status(404).json({ message: "Password invalid" });
+      return res.status(404).json({ message: "Invalid password" });
     }
 
-    const token = await generateToken(
-      userId,
-      { email, userPassword },
-      userRole,
-    );
+    // Generate JWT without storing in DB
+    const token = generateToken(userId, { email, userPassword }, userRole);
 
     res.status(200).json({ message: "Successful login", token });
   } catch (error) {
