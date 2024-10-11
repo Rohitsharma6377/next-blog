@@ -32,7 +32,7 @@ export default async function handler(req, res) {
             updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
           );
         `;
-        // await query(createTableSQL);
+        await query(createTableSQL);
         
         // Step 2: Upload file and insert media
         const { fileUrl, fileName } = await uploadFile({ file: files.image[0], uploadDir: 'uploads/blogs', fileName: slugify(`blog ${title}`)});
