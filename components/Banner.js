@@ -11,7 +11,7 @@ const BannerSlider = () => {
     const sliderSettings = {
         dots: false,
         infinite: true,
-        speed: 500,
+        speed: 100,
         autoplay: true,
         autoplaySpeed: 4500,
         slidesToShow: 1,
@@ -42,14 +42,14 @@ const BannerSlider = () => {
             <Slider ref={sliderRef} {...sliderSettings}>
                 <div>
                     <img
-                        src="/images/static/banner-1.jpg"
+                        src="/images/static/forest.jpg"
                         alt="Banner 1"
                         className="w-full cursor-pointer"
                     />
                 </div>
                 <div>
                     <img
-                        src="/images/static/banner-2.jpg"
+                        src="/images/static/lake.jpg"
                         alt="Banner 2"
                         className="w-full cursor-pointer"
                     
@@ -57,34 +57,41 @@ const BannerSlider = () => {
                 </div>
                 <div>
                     <img
-                        src="/images/static/banner-3.jpg"
+                        src="/images/static/landscape.jpg"
                         alt="Banner 3"
                         className="w-full cursor-pointer"
                     />
                 </div>
                 <div>
                     <img
-                        src="/images/static/banner-4.jpg"
+                        src="/images/static/lake2.jpg"
                         alt="Banner 4"
                         className="w-full cursor-pointer"
                     />
                 </div>
                 <div>
                     <img
-                        src="/images/static/banner-5.jpg"
+                        src="/images/static/mountain.jpg"
+                        alt="Banner 5"
+                        className="w-full cursor-pointer"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="/images/static/volcano.jpg"
                         alt="Banner 5"
                         className="w-full cursor-pointer"
                     />
                 </div>
             </Slider>
 
-            {/* Custom Navigation Arrows */}
+            {/* Custom Navigation Arrows
             <div className="absolute top-1/2 left-2 transform -translate-y-1/2 z-10 cursor-pointer" onClick={() => sliderRef.current.slickPrev()}>
                 <div className="text-gray-800 text-2xl hover:text-gray-600">❮</div>
             </div>
             <div className="absolute top-1/2 right-2 transform -translate-y-1/2 z-10 cursor-pointer" onClick={() => sliderRef.current.slickNext()}>
                 <div className="text-gray-800 text-2xl hover:text-gray-600">❯</div>
-            </div>
+            </div> */}
         </div>
     );
 };

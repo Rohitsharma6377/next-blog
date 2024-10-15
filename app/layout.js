@@ -3,8 +3,8 @@ import {NextUIProvider} from "@nextui-org/react";
 import '@/app/globals.css'
 
 export const metadata = {
-  title: "Trueloans",
-  description: "Get your home loan today!! Trueloans!!",
+  title: "pixel",
+  description: "Read Amazing Story by Travelers!!",
   icons: { icon: "/favicon.png" },
 };
 
