@@ -1,3 +1,4 @@
+// components/BannerSlider.js
 import React, { useRef, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -10,7 +11,7 @@ const BannerSlider = () => {
     const sliderSettings = {
         dots: false,
         infinite: true,
-        speed: 100,
+        speed: 1500,
         autoplay: true,
         autoplaySpeed: 4500,
         slidesToShow: 1,
@@ -35,9 +36,9 @@ const BannerSlider = () => {
         };
     }, []);
 
+
     return (
-        // Update the div below with fixed position styles
-        <div className="fixed top-0 left-0 w-full z-50">
+        <div className="relative">
             <Slider ref={sliderRef} {...sliderSettings}>
                 <div>
                     <img
@@ -51,6 +52,7 @@ const BannerSlider = () => {
                         src="/images/static/lake.jpg"
                         alt="Banner 2"
                         className="w-full cursor-pointer"
+                    
                     />
                 </div>
                 <div>
@@ -77,11 +79,19 @@ const BannerSlider = () => {
                 <div>
                     <img
                         src="/images/static/volcano.jpg"
-                        alt="Banner 6"
+                        alt="Banner 5"
                         className="w-full cursor-pointer"
                     />
                 </div>
             </Slider>
+
+            {/* Custom Navigation Arrows
+            <div className="absolute top-1/2 left-2 transform -translate-y-1/2 z-10 cursor-pointer" onClick={() => sliderRef.current.slickPrev()}>
+                <div className="text-gray-800 text-2xl hover:text-gray-600">❮</div>
+            </div>
+            <div className="absolute top-1/2 right-2 transform -translate-y-1/2 z-10 cursor-pointer" onClick={() => sliderRef.current.slickNext()}>
+                <div className="text-gray-800 text-2xl hover:text-gray-600">❯</div>
+            </div> */}
         </div>
     );
 };

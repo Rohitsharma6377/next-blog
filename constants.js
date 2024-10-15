@@ -15,18 +15,6 @@ export const NavItems = [
       { name: "Website Development", url: "/website-development" },
       { name: "E-Commerce Development", url: "/ecommerce-development" },
       { name: "Digital Marketing", url: "/digital-marketing" },
-      { name: "Branding", url: "/branding" },
-      { name: "SEO Service", url: "/seo-service" },
-      { name: "E-Commerce SEO", url: "/ecommerce-seo" },
-      { name: "Local SEO", url: "/local-seo" },
-      { name: "Social Media Marketing", url: "/social-media-marketing" },
-      { name: "Quora Marketing", url: "/quora-marketing" },
-      { name: "Technical SEO", url: "/technical-seo" },
-      { name: "Video SEO", url: "/video-seo" },
-      // { name: 'Search Engine Optimization', url: '/search-engine-optimization-in-dubai' },
-      // { name: 'Social Media Marketing', url: '/social-media-marketing-in-dubai' },
-      // { name: 'Website Design And Development', url: '/website-design-and-development-in-dubai' },
-      // { name: 'Pay Per Click', url: '/pay-per-click-in-dubai' },
     ],
   
     technology: [
@@ -35,22 +23,11 @@ export const NavItems = [
       { name: "Wordpress Development", url: "/wordpress-development" },
       { name: "React JS Development", url: "/react-js-development" },
       { name: "Node JS Development", url: "/nodejs-development" },
-      { name: "Vue JS Development", url: "/vue-js-development" },
-      { name: "Android Development", url: "/android-app-development" },
-      { name: "Flutter Development", url: "/hire-flutter-developers" },
-      { name: "Javascript Development", url: "/hire-javascript-developers" },
-      { name: "Ios App Development", url: "/ios-app-development" },
-      // { name: 'Next JS Development', url: '' },
-      // { name: 'Shopify Development', url: '' },
     ],
   
     portfolio: [
       { name: "Web Portfolio", url: "/web-portfolio" },
       { name: "UI Portfolio", url: "/ui-portfolio" },
-      // { name: 'Seo Portfolio', url: '/seo-portfolio' },
-      { name: "Graphic Portfolio", url: "/graphics-portfolio" },
-      { name: "Video Portfolio", url: "/video-portfolio" },
-      // { name: 'Company Portfolio', url: '/company-portfolio.pdf' },
     ],
   };
   
@@ -67,14 +44,6 @@ export const NavItems = [
           name: "Social Media Marketing (SMM)",
           url: "/social-media-marketing-in-dubai",
         },
-        { name: "Pay Per Click (PPC)", url: "/pay-per-click-in-dubai" },
-        {
-          name: "Website Design And Development",
-          url: "/website-design-and-development-in-dubai",
-        },
-        { name: "Wordpress Development", url: "/wordpress-development-in-dubai" },
-        { name: "Laravel Developer", url: "/laravel-developer-in-dubai" },
-        { name: "React Developer", url: "/react-developer-in-dubai" },
       ],
     },
     {
@@ -95,15 +64,6 @@ export const NavItems = [
           name: "Social Media Marketing (SMM)",
           url: "/social-media-marketing-in-abu-dhabi",
         },
-        {
-          name: "Website Design And Development",
-          url: "/website-design-and-development-in-abu-dhabi",
-        },
-        {
-          name: "Wordpress Development",
-          url: "/wordpress-development-in-abu-dhabi",
-        },
-        { name: "Laravel Developer", url: "/laravel-developer-in-abu-dhabi" },
       ],
     },
   ];
@@ -129,24 +89,12 @@ export const NavItems = [
   export const technology = [
     { name: "Laravel Development", url: "/laravel-development" },
     { name: "PHP Development", url: "/php-development" },
-    { name: "Wordpress Development", url: "/wordpress-development" },
-    { name: "React JS Development", url: "/react-js-development" },
-    { name: "Node JS Development", url: "/nodejs-development" },
-    { name: "Vue Js Development", url: "/vue-js-development" },
-    { name: "Android Development", url: "/android-app-development" },
-    { name: "Flutter Development", url: "/hire-flutter-developers" },
-    { name: "Javascript Development", url: "/hire-javascript-developers" },
-    { name: "Ios App Development", url: "/ios-app-development" },
-    // {name: 'PHP Development', url: ''},
-    // {name: 'Shopify Development', url: ''},
   ];
   
   //SideBar Menu
   import { RiBloggerLine } from "react-icons/ri";
   import { MdOutlineInsertPageBreak } from "react-icons/md";
   import { RiUserSettingsLine } from "react-icons/ri";
-  import { GoHome } from "react-icons/go";
-  import { CgWorkAlt } from "react-icons/cg";
   import { TbSmartHome } from "react-icons/tb";
   
   export const sidebarItems = [
@@ -220,82 +168,82 @@ export const NavItems = [
     { id: 3, value: "100+", label: "Reviews" },
   ];
   
-  export const products = [
-    {
-      imgURL: 'course1',
-      name: "Scaled Scrum Master",
-      price: "$150.00",
-    },
-    {
-      imgURL: 'course1',
-      name: "Scrum Fundamentals Certified",
-      price: "$150.00",
-    },
-    {
-      imgURL: 'course1',
-      name: "Scrum Product Owner Certified",
-      price: "$150.00",
-    },
-    {
-      imgURL: 'course1',
-      name: "Scaled Scrum Master",
-      price: "$150.00",
-    },
-  ];
+  // export const products = [
+  //   {
+  //     imgURL: 'course1',
+  //     name: "Scaled Scrum Master",
+  //     price: "$150.00",
+  //   },
+  //   {
+  //     imgURL: 'course1',
+  //     name: "Scrum Fundamentals Certified",
+  //     price: "$150.00",
+  //   },
+  //   {
+  //     imgURL: 'course1',
+  //     name: "Scrum Product Owner Certified",
+  //     price: "$150.00",
+  //   },
+  //   {
+  //     imgURL: 'course1',
+  //     name: "Scaled Scrum Master",
+  //     price: "$150.00",
+  //   },
+  // ];
   
-  export const articles = [
-    {
-      imgURL: 'course1',
-      name: "Scaled Scrum Master",
-      price: "$150.00",
-    },
-    {
-      imgURL: 'course1',
-      name: "Scrum Fundamentals Certified",
-      price: "$150.00",
-    },
-    {
-      imgURL: 'course1',
-      name: "Scrum Product Owner Certified",
-      price: "$150.00",
-    },
-  ];
+  // export const articles = [
+  //   {
+  //     imgURL: 'course1',
+  //     name: "Scaled Scrum Master",
+  //     price: "$150.00",
+  //   },
+  //   {
+  //     imgURL: 'course1',
+  //     name: "Scrum Fundamentals Certified",
+  //     price: "$150.00",
+  //   },
+  //   {
+  //     imgURL: 'course1',
+  //     name: "Scrum Product Owner Certified",
+  //     price: "$150.00",
+  //   },
+  // ];
   
-  export const Services = [
-    {
-      imgURL: 'truckFast',
-      label: "Free shipping",
-      subtext: "Enjoy seamless shopping with our complimentary shipping service.",
-    },
-    {
-      imgURL: 'shieldTick',
-      label: "Secure Payment",
-      subtext:
-        "Experience worry-free transactions with our secure payment options.",
-    },
-    {
-      imgURL: 'support',
-      label: "Love to help you",
-      subtext: "Our dedicated team is here to assist you every step of the way.",
-    },
-  ];
+  // export const Services = [
+  //   {
+  //     imgURL: 'truckFast',
+  //     label: "Free shipping",
+  //     subtext: "Enjoy seamless shopping with our complimentary shipping service.",
+  //   },
+  //   {
+  //     imgURL: 'shieldTick',
+  //     label: "Secure Payment",
+  //     subtext:
+  //       "Experience worry-free transactions with our secure payment options.",
+  //   },
+  //   {
+  //     imgURL: 'support',
+  //     label: "Love to help you",
+  //     subtext: "Our dedicated team is here to assist you every step of the way.",
+  //   },
+  // ];
   
-  export const reviews = [
-    {
-      imgURL: 'customer1',
-      customerName: "Morich Brown",
-      rating: 4.5,
-      feedback:
-        "The attention to detail and the quality of the product exceeded my expectations. Highly recommended!",
-    },
-    {
-      imgURL: 'customer2',
-      customerName: "Lota Mongeskar",
-      rating: 4.5,
-      feedback:
-        "The product not only met but exceeded my expectations. I'll definitely be a returning customer!",
-    },
-  ];
+  // export const reviews = [
+  //   {
+  //     imgURL: 'customer1',
+  //     customerName: "Morich Brown",
+  //     rating: 4.5,
+  //     feedback:
+  //       "The attention to detail and the quality of the product exceeded my expectations. Highly recommended!",
+  //   },
+  //   {
+  //     imgURL: 'customer2',
+  //     customerName: "Lota Mongeskar",
+  //     rating: 4.5,
+  //     feedback:
+  //       "The product not only met but exceeded my expectations. I'll definitely be a returning customer!",
+  //   },
+  // ];
   
   
   export const socialMedia = [

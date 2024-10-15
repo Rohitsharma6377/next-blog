@@ -2,7 +2,7 @@ import React from 'react'
 import News from '../components/News';
 import BannerSlider from '../components/Banner';
 import BlogSlider from '@/components/BlogSlider';
-import Head from 'next/head';
+import Card from '@/components/Card'
 import { fetchDataFromDB } from '@/utils/helper';
 
 
@@ -86,6 +86,7 @@ export default function HomePage({ blogs}) {
       <BannerSlider />
       <News/>
       <BlogSlider data={blogs}/>
+      <Card/>
     </>
   )
 }
