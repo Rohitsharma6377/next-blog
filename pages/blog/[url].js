@@ -2,8 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { baseUrl, fetchDataFromDB } from "@/utils/helper";
 import { useEffect, useState } from "react";
-import { EmailIcon, EmailShareButton, FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton } from "react-share";
-import BlogPostWithTOC from "@/components/BlogTableOfContent";
+import { EmailIcon, EmailShareButton, FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton} from "react-share";
 import LeadForm from "@/components/LeadForm";
 
 

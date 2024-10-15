@@ -2,7 +2,7 @@ import React from 'react'
 import News from '../components/News';
 import BannerSlider from '../components/Banner';
 import BlogSlider from '@/components/BlogSlider';
-import Card from '@/components/Card'
+import {Card} from '@/components/Card'
 import { fetchDataFromDB } from '@/utils/helper';
 
 

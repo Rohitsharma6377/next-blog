@@ -2592,3 +2592,49 @@ span.mq{
         max-width: 200px;
     }
 }
+/* Custom floating cloud animation */
+@keyframes floatCloud {
+  0% {
+      transform: translateX(-100%) translateY(0);
+  }
+  50% {
+      transform: translateX(50%) translateY(-20px);
+  }
+  100% {
+      transform: translateX(150%) translateY(0);
+  }
+}
+
+/* Cloud styles */
+.cloud {
+  position: absolute;
+  background-color: rgba(255, 182, 193, 0.5); /* Light pink */
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: floatCloud 15s linear infinite;
+}
+
+/* Cloud variations */
+.cloud-1 {
+  width: 200px;
+  height: 100px;
+  top: 10%;
+  left: -20%;
+  animation-duration: 20s;
+}
+
+.cloud-2 {
+  width: 250px;
+  height: 120px;
+  top: 40%;
+  left: -30%;
+  animation-duration: 18s;
+}
+
+.cloud-3 {
+  width: 150px;
+  height: 80px;
+  top: 60%;
+  left: -25%;
+  animation-duration: 25s;
+}

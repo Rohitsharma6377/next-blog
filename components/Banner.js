@@ -1,13 +1,13 @@
-// components/BannerSlider.js
 import React, { useRef, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+// Banner slider component
 const BannerSlider = () => {
     const sliderRef = useRef(null);
 
-    // Slider settings
+    // Slider settings for banners
     const sliderSettings = {
         dots: false,
         infinite: true,
@@ -17,6 +17,17 @@ const BannerSlider = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
+    };
+
+    // Slider settings for blog content
+    const blogSliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        autoplay: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
     };
 
     // Handle keyboard navigation
@@ -36,62 +47,54 @@ const BannerSlider = () => {
         };
     }, []);
 
-
     return (
-        <div className="relative">
-            <Slider ref={sliderRef} {...sliderSettings}>
-                <div>
-                    <img
-                        src="/images/static/forest.jpg"
-                        alt="Banner 1"
-                        className="w-full cursor-pointer"
-                    />
-                </div>
-                <div>
-                    <img
-                        src="/images/static/lake.jpg"
-                        alt="Banner 2"
-                        className="w-full cursor-pointer"
-                    
-                    />
-                </div>
-                <div>
-                    <img
-                        src="/images/static/landscape.jpg"
-                        alt="Banner 3"
-                        className="w-full cursor-pointer"
-                    />
-                </div>
-                <div>
-                    <img
-                        src="/images/static/lake2.jpg"
-                        alt="Banner 4"
-                        className="w-full cursor-pointer"
-                    />
-                </div>
-                <div>
-                    <img
-                        src="/images/static/mountain.jpg"
-                        alt="Banner 5"
-                        className="w-full cursor-pointer"
-                    />
-                </div>
-                <div>
-                    <img
-                        src="/images/static/volcano.jpg"
-                        alt="Banner 5"
-                        className="w-full cursor-pointer"
-                    />
-                </div>
-            </Slider>
-
-            {/* Custom Navigation Arrows
-            <div className="absolute top-1/2 left-2 transform -translate-y-1/2 z-10 cursor-pointer" onClick={() => sliderRef.current.slickPrev()}>
-                <div className="text-gray-800 text-2xl hover:text-gray-600">❮</div>
+        <div>
+            <div className="h-[200px] md:h-[200px] lg:h-[200px] w-full">
+                <Slider ref={sliderRef} {...sliderSettings}>
+                    <div>
+                        <img
+                            src="/images/static/forest.jpg"
+                            alt="Banner 1"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="/images/static/lake.jpg"
+                            alt="Banner 2"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="/images/static/landscape.jpg"
+                            alt="Banner 3"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="/images/static/lake2.jpg"
+                            alt="Banner 4"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="/images/static/mountain.jpg"
+                            alt="Banner 5"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="/images/static/volcano.jpg"
+                            alt="Banner 6"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                </Slider>
             </div>
-            <div className="absolute top-1/2 right-2 transform -translate-y-1/2 z-10 cursor-pointer" onClick={() => sliderRef.current.slickNext()}>
-                <div className="text-gray-800 text-2xl hover:text-gray-600">❯</div>
-            </div> */}
         </div>
     );
 };
