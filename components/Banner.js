@@ -48,8 +48,7 @@ const BannerSlider = () => {
   }, []);
 
   return (
-      <div className="relative">
-      <div className="absolute">
+    <div className="relative">
         <Slider ref={sliderRef} {...sliderSettings}>
                 <div >
                   <img
@@ -94,7 +93,6 @@ const BannerSlider = () => {
                   />
                 </div>
         </Slider>
-        </div>
     </div>
   );
 };
