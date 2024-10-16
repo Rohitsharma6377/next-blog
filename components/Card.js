@@ -31,6 +31,16 @@ export function Card() {
       src: "/images/static/lake.jpg",
 
     },
+    {
+      title: "The road not taken",
+      src: "/images/static/mountain.jpg",
+
+    },
+    {
+      title: "The First Rule",     
+      src: "/images/static/lake.jpg",
+
+    },
   ];
 
   return <FocusCards cards={cards} />;

@@ -11,7 +11,7 @@ const BannerSlider = () => {
   const sliderSettings = {
     dots: false,
     infinite: true,
-    speed: 1500,
+    speed: 1000,
     autoplay: true,
     autoplaySpeed: 4500,
     slidesToShow: 1,
@@ -54,42 +54,42 @@ const BannerSlider = () => {
                   <img
                     src="/images/static/forest.jpg"
                     alt="Banner 1"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[550px] object-cover"
                   />
                 </div>
                 <div>
                   <img
                     src="/images/static/lake.jpg"
                     alt="Banner 2"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[550px] object-cover"
                   />
                 </div>
                 <div>
                   <img
                     src="/images/static/landscape.jpg"
                     alt="Banner 3"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[550px] object-cover"
                   />
                 </div>
                 <div>
                   <img
                     src="/images/static/lake2.jpg"
                     alt="Banner 4"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[550px] object-cover"
                   />
                 </div>
                 <div>
                   <img
                     src="/images/static/mountain.jpg"
                     alt="Banner 5"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[550px] object-cover"
                   />
                 </div>
                 <div>
                   <img
                     src="/images/static/volcano.jpg"
                     alt="Banner 6"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[550px] object-cover"
                   />
                 </div>
         </Slider>
