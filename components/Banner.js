@@ -1,13 +1,11 @@
-import React, { useRef, useEffect } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useRef, useEffect } from "react"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
-// Banner slider component
-const BannerSlider = () => {
-  const sliderRef = useRef(null);
+export default function BannerSlider() {
+  const sliderRef = useRef<Slider>(null)
 
-  // Slider settings for banners
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -17,84 +15,57 @@ const BannerSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-  };
+  }
 
-  // Slider settings for blog content
-  const blogSliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    autoplay: false,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    arrows: true,
-  };
-
-  // Handle keyboard navigation
   const handleKeyDown = (event) => {
     if (event.key === "ArrowLeft") {
-      sliderRef.current.slickPrev();
+      sliderRef.current?.slickPrev()
     } else if (event.key === "ArrowRight") {
-      sliderRef.current.slickNext();
+      sliderRef.current?.slickNext()
     }
-  };
+  }
 
-  // Add event listener for keyboard navigation
   useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown)
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [])
+
+  const slides = [
+    { src: "/images/static/forest.jpg", alt: "Forest" },
+    { src: "/images/static/lake.jpg", alt: "Lake" },
+    { src: "/images/static/landscape.jpg", alt: "Landscape" },
+    { src: "/images/static/lake2.jpg", alt: "Another Lake" },
+    { src: "/images/static/mountain.jpg", alt: "Mountain" },
+    { src: "/images/static/volcano.jpg", alt: "Volcano" },
+  ]
 
   return (
     <div className="relative">
-        <Slider ref={sliderRef} {...sliderSettings}>
-                <div >
-                  <img
-                    src="/images/static/forest.jpg"
-                    alt="Banner 1"
-                    className="w-full h-[550px] object-cover"
-                  />
-                </div>
-                <div>
-                  <img
-                    src="/images/static/lake.jpg"
-                    alt="Banner 2"
-                    className="w-full h-[550px] object-cover"
-                  />
-                </div>
-                <div>
-                  <img
-                    src="/images/static/landscape.jpg"
-                    alt="Banner 3"
-                    className="w-full h-[550px] object-cover"
-                  />
-                </div>
-                <div>
-                  <img
-                    src="/images/static/lake2.jpg"
-                    alt="Banner 4"
-                    className="w-full h-[550px] object-cover"
-                  />
-                </div>
-                <div>
-                  <img
-                    src="/images/static/mountain.jpg"
-                    alt="Banner 5"
-                    className="w-full h-[550px] object-cover"
-                  />
-                </div>
-                <div>
-                  <img
-                    src="/images/static/volcano.jpg"
-                    alt="Banner 6"
-                    className="w-full h-[550px] object-cover"
-                  />
-                </div>
-        </Slider>
+      <Slider ref={sliderRef} {...sliderSettings}>
+        {slides.map((slide, index) => (
+          <div key={index} className="relative">
+            <img
+              src={slide.src}
+              alt={slide.alt}
+              className="w-full h-[550px] object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start p-12">
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                Nature is Calling
+              </h2>
+              <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                Escape Now
+              </h3>
+              <p className="text-white text-lg md:text-xl mb-8 max-w-md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              
+            </div>
+          </div>
+        ))}
+      </Slider>
     </div>
-  );
-};
-
-export default BannerSlider;
+  )
+}
